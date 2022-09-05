@@ -41,7 +41,7 @@ pokemon.ataques.push(ataques2)
 
 /*c) Na cópia do objeto original, adicione a propriedade **`ataques`** 
 a partir do **espalhamento** da propriedade criada para o objeto original;*/
-pokemonCopia2 = {
+const pokemonCopia2 = {
     ...pokemonCopia,
     ataques: [ataques2]
 }
@@ -62,18 +62,15 @@ const pokemon2 = {
 
 /*e) para a cópia, crie o ataque **“Jato de Água”**, com **40 de dano**, 
 **100 de precisão**, e do tipo **“Água”**;*/
-const pokemonCopia3 = {
-    ...pokemonCopia2,
-    ataques: {
+pokemonCopia2.ataques.push({
         nome: "Jato de Água",
         dano: 40,
         tipo: "Água",
         precisao: 100
-    }
-}
+    })
 
 
 /*f) Imprima os dois objetos no console.*/
 
 console.log(pokemon2)
-console.log(pokemonCopia3)
+console.log(pokemonCopia2)
